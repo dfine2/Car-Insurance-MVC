@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row no-gutters mb-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow mt-5">
+        <div class="card-header text-center">
+            <p class="my-auto">Now, please tell us a few details about your car.</p>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("Next2", "Home", FormMethod.Post))
+            {
+                <div class="form-group col-md-12 row">
+                    <label for="CarMake" class="my-auto mr-4 col-2 px-0">Year</label>
+                    <input name="CarYear" type="text" class="form-control col-6 " />
+                </div>
+                <div class="form-group col-md-12 row">
+                    <label for="CarMake" class="my-auto mr-4 col-2 px-0">Make</label>
+                    <input name="CarMake" type="text" class="form-control col-6" />
+                </div>
+                <div class="form-group col-md-12 row">
+                    <label for="CarMake" class="my-auto mr-4 col-2 px-0">Model</label>
+                    <input name="CarModel" type="text" class="form-control" />
+                </div>
+                <div>
+                    <button type="submit" class="formBtn col-3 btn btn-block btn-primary">Next</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

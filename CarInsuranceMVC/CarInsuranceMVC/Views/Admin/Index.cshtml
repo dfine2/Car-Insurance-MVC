@@ -1,0 +1,34 @@
+﻿@using CarInsuranceMVC.Models
+@model List<user>
+
+    <div class="row no-gutters mb-3 ">
+        <div class="card col-11 mx-auto shadow mt-5 adminPanel">
+            <div class="card-header text-center">
+                <p class="my-auto">
+                    <strong>
+                        Welcome, Administrator
+                    </strong>
+                </p>
+            </div>
+            <div class="card-body">
+                @foreach (var quote in Model)
+                { 
+                    <div class="row ">
+                        <div class="col  text-center">
+                            @quote.FirstName @quote.LastName
+                        </div>
+                        <div class="col text-center">
+                            @quote.EmailAddress
+                        </div>
+                        <div class="col text-center">
+                            $@String.Format("{0:n}",quote.MonthlyQuote) monthly
+                        </div>
+                        <div class="col text-center">
+                            $@String.Format("{0:n}",quote.YearlyQuote) yearly
+                        </div>
+                    </div>
+                    <br />
+                }
+            </div>
+        </div>
+    </div>

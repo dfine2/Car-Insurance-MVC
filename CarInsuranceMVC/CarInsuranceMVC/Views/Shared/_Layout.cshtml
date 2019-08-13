@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="bg-cyan">
+<head>
+    <meta charset="utf-8" />
+    <title>OneStop Car Quotes</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+    @RenderSection("scripts", required: false)
+</head>
+<body class="bg-cyan">
+    <div class="container body-content">
+
+        <div>
+            <h2 class="text-center mb-3">OneStop</h2>
+            <h4 class="text-center mb-4">Your one-stop shop for car insurance quotes!</h4>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

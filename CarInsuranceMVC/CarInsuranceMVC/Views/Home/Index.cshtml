@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row no-gutters mb-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow mt-5">
+        <div class="card-header text-center">
+            <p class="my-auto">Just fill out the information below to get your quote!</p>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("Next1", "Home", FormMethod.Post))
+            {
+                <div class="form-group row col-md-12">
+                    <label for="FirstName" class="my-auto mr-4 col-3 px-0">First Name</label>
+                    <input name="FirstName" type="text" class="form-control col-6" placeholder="First Name" />
+                </div>
+                <div class="form-group row col-md-12">
+                    <label for="LastName" class="my-auto mr-4 col-3 px-0">Last Name</label>
+                    <input name="LastName" type="text" class="form-control col-6" placeholder="Last Name" />
+                </div>
+                <div class="form-group row col-md-12">
+                    <label for="DateOfBirth" class="my-auto mr-4 col-3 text-left px-0">Date of Birth</label>
+                    <input name="DateOfBirth" type="date" class="form-control col-6"/>
+                </div>
+                <div class="form-group row col-md-12">
+                    <label for="EmailAddress" class="my-auto mr-4 col-3 text-left px-0">Email Address</label>
+                    <input name="EmailAddress" type="email" class="form-control col-6" />
+                </div>
+                <div>
+                    <button type="submit" class="formBtn col-3 btn btn-block btn-primary">Next</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

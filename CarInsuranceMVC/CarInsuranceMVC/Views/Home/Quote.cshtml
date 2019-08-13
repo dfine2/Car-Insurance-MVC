@@ -1,0 +1,24 @@
+﻿@using CarInsuranceMVC.Models
+@model  user
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row no-gutters mb-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow mt-5">
+        <div class="card-header text-center">
+            <p class="my-auto"><strong> Hello @Model.FirstName @Model.LastName!<br />
+                Here's your quote!</strong></p>
+        </div>
+        <div class="card-body">
+            <p class="my-2 text-center"> $@String.Format("{0:n}", Model.MonthlyQuote) monthly</p>
+            <p class="text-center">for an annual total of</p>
+            <h2 class="text-center">$@String.Format("{0:n}", Model.YearlyQuote) </h2>
+            @using (Html.BeginForm("GoHome", "Home", FormMethod.Post))
+            {
+                <button type="submit" class="formBtn col-3 btn btn-block btn-primary">Home</button>
+            }
+        </div>
+    </div>
+</div>
+
